@@ -30,7 +30,9 @@ for (let i = 0; i<imageSrcArray.length;i++){
 const dotContainer=document.querySelector("#dot-container")
 slidesArray.forEach(slide => {
     let newLi = document.createElement("li")
+    newLi.setAttribute("id", slide.id)
     dotContainer.appendChild(newLi)
+
 });
 
 const imageContainer=document.querySelector("div.image-container")

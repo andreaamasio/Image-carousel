@@ -15,7 +15,7 @@
     min-width: 48rem;
     flex:  1 0 100%;
 }
-button {
+.left, .right{
     width: 2rem;
     height: 30%;
     font-size: 3rem;
@@ -29,9 +29,17 @@ button {
 }
 div#dot-container {
     display: flex;
+    text-align: center;
     gap: 3px
+}
+ul{
+    text-align: center;
 }
 li {
     color: black;
     list-style: circle;
+    list-style-position: inside;
+    padding-left: 10px;
+    font-size: 2rem;
 }
+
