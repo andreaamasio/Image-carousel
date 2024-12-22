@@ -2,12 +2,31 @@
     padding: 0;
     margin: 0;
 }
-body{
-} 
-.container {
+.big-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    
 }
 
+.image-container {
+    min-width: 48rem;
+    flex:  1 0 100%;
+}
+button {
+    width: 2rem;
+    height: 30%;
+    font-size: 3rem;
+    border-radius: 10px;
+}
+.slide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+ul {
+    text-align: center;
+}
