@@ -27,6 +27,11 @@ button {
     text-align: center;
     align-items: center;
 }
-ul {
-    text-align: center;
+div#dot-container {
+    display: flex;
+    gap: 3px
+}
+li {
+    color: black;
+    list-style: circle;
 }

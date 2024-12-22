@@ -1,6 +1,6 @@
 // factory function images
-function createSlide(src, alt="a picture"){
-    return { src, alt }
+function createSlide(src, alt="a picture", id){
+    return { src, alt, id }
 }
 
 // array of photos
@@ -20,14 +20,21 @@ const slidesArray=[]
 for (let i = 0; i<imageSrcArray.length;i++){
     let newImage = createSlide(
         imageSrcArray[i],
-        imageAltArray[i]
+        imageAltArray[i],
+        i
     )
     slidesArray.push(newImage)
 }
 
 
-const imageContainer=document.querySelector("div.container")
+const dotContainer=document.querySelector("#dot-container")
 slidesArray.forEach(slide => {
-    
+    let newLi = document.createElement("li")
+    dotContainer.appendChild(newLi)
 });
+
+const imageContainer=document.querySelector("div.image-container")
+
+
+
 
