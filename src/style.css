@@ -43,3 +43,6 @@ li {
     font-size: 2rem;
 }
 
+img {
+    min-width: 35rem;
+}

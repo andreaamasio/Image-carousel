@@ -6,9 +6,9 @@ function createSlide(src, alt="a picture", id){
 // array of photos
 
 const imageSrcArray=[
-    "./images/image-1.jpeg",
-    "./images/image-2.jpeg",
-    "./images/image-3.jpeg"]
+    "images/image-1.jpeg",
+    "images/image-2.jpg",
+    "images/image-3.jpeg"]
 
 const imageAltArray=[
     "a bird",
@@ -21,21 +21,39 @@ for (let i = 0; i<imageSrcArray.length;i++){
     let newImage = createSlide(
         imageSrcArray[i],
         imageAltArray[i],
-        i
+        `slide-${i}`
     )
     slidesArray.push(newImage)
 }
+function getSlide(id){
+    return slidesArray.find((slide)=>
+        slide.id === id
+    )
+}
 
+function displayImage(event){
+    let slideID = event.currentTarget.id
+    console.log(slideID)
+    let slideSelected = getSlide(slideID)
+    console.log(slideSelected)
+    imageElement.setAttribute("src", slideSelected.src)
+    imageElement.setAttribute("alt", slideSelected.alt)
+    liTarget=document.querySelector(`#${slideID}`)
+    liTarget.setAttribute("style","list-style:disc")
+}
 
 const dotContainer=document.querySelector("#dot-container")
 slidesArray.forEach(slide => {
     let newLi = document.createElement("li")
     newLi.setAttribute("id", slide.id)
+    newLi.addEventListener("click", displayImage)
     dotContainer.appendChild(newLi)
-
 });
 
-const imageContainer=document.querySelector("div.image-container")
+const imageElement=document.querySelector("div.image-container img")
+
+
+
 
 
 
