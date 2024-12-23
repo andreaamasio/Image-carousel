@@ -42,6 +42,9 @@ li {
     padding-left: 10px;
     font-size: 2rem;
 }
+li:first-of-type {
+    list-style: disc;
+}
 
 img {
     min-width: 35rem;
