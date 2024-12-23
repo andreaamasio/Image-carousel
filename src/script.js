@@ -32,6 +32,11 @@ function getSlide(id){
 }
 
 function displayImage(event){
+    const allLi=document.querySelectorAll("li")
+    allLi.forEach(li => {
+        li.setAttribute("style","list-style:circle")
+    });
+    
     let slideID = event.currentTarget.id
     console.log(slideID)
     let slideSelected = getSlide(slideID)
